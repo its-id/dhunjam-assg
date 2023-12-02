@@ -1,4 +1,4 @@
-import '../../styles/globals.css'
+import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { Poppins } from '@next/font/google'
 
@@ -9,7 +9,9 @@ const poppins: any = Poppins({
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <main className={poppins.className}>
+    <main
+      className={`${poppins.className} container max-w-7xl m-auto w-screen h-screen`}
+    >
       <Component {...pageProps} />
     </main>
   );

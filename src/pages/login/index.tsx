@@ -8,11 +8,9 @@ const Login = () => {
       <Head>
         <title>Dhun Jam Entertainment | Login</title>
       </Head>
-      <div className='flex shrink-0 flex-col gap-12 justify-center items-center flex-1'>
-        <Image src={'/icons/logo.svg'} alt='logo' width={40} height={40} />
-        <div className='w-full'>
-          <LoginForm />
-        </div>
+      <div className='w-[600px] flex-shrink-0 mx-auto flex flex-col gap-12 justify-center items-center'>
+        <p className='text-[32px] font-semibold'>Venue Admin Login</p>
+        <LoginForm />
       </div>
     </div>
   );
