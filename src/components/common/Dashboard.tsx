@@ -1,16 +1,9 @@
 import React, { useState, PureComponent, useContext, useEffect } from 'react';
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  ResponsiveContainer,
-  Tooltip,
-} from 'recharts';
+
 import { Toaster, toast } from 'react-hot-toast';
 import AppContext from '../../context/AppContext';
 import { useRouter } from 'next/router';
-import CustomTooltip from './CustomTooltip';
+import BarChartComponent from './BarChartCompnent';
 
 const Dashboard = () => {
   const {
@@ -226,46 +219,7 @@ const Dashboard = () => {
               ))}
           </div>
         </div>
-        {user?.charge_customers && (
-          <div className='w-full max-w-[600px] mt-8'>
-            <ResponsiveContainer aspect={2 / 1} width='100%' height='100%'>
-              <BarChart
-                width={500}
-                height={300}
-                data={graphData}
-                margin={{
-                  top: 5,
-                  right: 30,
-                  left: 20,
-                  bottom: 5,
-                }}
-              >
-                <XAxis
-                  dataKey='name'
-                  tickFormatter={(name) => {
-                    const num = name.split('_')[1];
-                    return `Category ${num - 5}`;
-                  }}
-                  stroke='#fff'
-                  style={{
-                    fontSize: '0.8rem',
-                  }}
-                />
-                <Tooltip
-                  cursor={{ fill: 'rgba(240, 195, 241, 0.2)' }}
-                  content={<CustomTooltip />}
-                />
-                <YAxis
-                  stroke='transparent'
-                  textAnchor='end'
-                  axisLine={{ stroke: '#fff' }}
-                  label={{ value: '₹', fill: '#fff', fontSize: '2rem' }}
-                />
-                <Bar dataKey='value' fill='#F0C3F1' barSize={40} />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-        )}
+        {user?.charge_customers && <BarChartComponent />}
         <button
           onClick={handleSubmit}
           disabled={!valid}
