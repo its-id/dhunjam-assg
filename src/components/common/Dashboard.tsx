@@ -85,8 +85,9 @@ const Dashboard = () => {
         },
         {
           style: {
-            background: 'rgba(0,0,0,0.6)',
-            backdropFilter: 'blur(5px)',
+            background: 'rgba(255, 255, 255,0.3)',
+            color: '#fff',
+            backdropFilter: 'blur(10px)',
           },
         }
       )
