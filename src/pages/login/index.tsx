@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import LoginForm from '../../components/common/LoginForm';
 
-const Login = () => {
+const LoginPage = () => {
+
   return (
     <div className='w-full h-full flex items-center justify-center'>
       <Head>
@@ -16,4 +16,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginPage;

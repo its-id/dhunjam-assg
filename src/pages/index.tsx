@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Login from './login'
+import LoginPage from './login'
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +13,7 @@ const Home: NextPage = () => {
           content='Dhun Jam enables guests at hospitality venues to request songs to DJs, live performers and artists'
         />
       </Head>
-      <Login />
+      <LoginPage />
     </>
   );
 }
